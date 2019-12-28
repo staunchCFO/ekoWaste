@@ -1,0 +1,85 @@
+
+.custom-toggler .navbar-toggler-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24' /%3E%3C/svg%3E");
+}
+a{
+	color: #fff;
+}
+a:hover{
+	color: rgb(218, 196, 196);
+}
+.navbar{
+	background: green;
+}
+.navbar-brand{
+	font-size: 2rem;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.image{
+	background: url('/images/garbage-can.jpg');
+	background-size: cover;
+	height: 80%;
+}
+
+.main-content{
+	text-align: center;
+}
+.header{
+	padding-top: 12rem;
+	color: #fff;
+	font-weight: bold;
+	font-size: 4rem;
+}
+.info{
+	color: #fff;
+	font-size: 1.5rem;
+}
+.button{
+	background: transparent;
+	margin-bottom: 12rem;
+	margin-top: 1rem;
+	
+}
+.button:hover{
+	background: greenyellow;
+}
+.click{
+	text-align: center;
+}
+.reg_note{
+	text-align: center;
+	margin-top: 3rem;
+}
+.edit{
+	color: blue;
+}
+.trash{
+	color: red;
+}
+.label{
+	font-weight: bold;
+}
+.text-warning{
+	color: orangered;
+}
+.back-to-top {
+	position: fixed;
+	display: none;
+	background: greenyellow;
+	color: #fff;
+	width: 44px;
+	height: 44px;
+	text-align: center;
+	line-height: 1;
+	font-size: 16px;
+	border-radius: 50%;
+	right: 15px;
+	bottom: 15px;
+	transition: background 0.5s;
+	z-index: 11;
+  }
+  
+  .back-to-top i {
+	padding-top: 12px;
+	color: #fff;
+  }
