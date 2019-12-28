@@ -1,0 +1,61 @@
+include includes/header.pug
+
+block content 
+  nav(role="navigation" class="navbar navbar-expand-lg")
+    div(class="container")
+      a(class='navbar-brand' , href='/') ekoWaste
+      button(button type="button" class="navbar-toggler collapsed custom-toggler" data-toggle="collapse" data-target="#menu"
+        arials-control="menu" aria-expanded="false" aria-label="Toggle navigation")
+        span(class="navbar-toggler-icon")
+      div(class="navbar-collapse collapse" id="menu")
+        - let updateUrl = '/user' + result._id + '/update'
+        - let deleteUrl = '/user' + result._id + '/delete'
+          ul(class="navbar-nav ml-auto")
+            li(class="nav-item mr-3")
+              a(class="nav-link active" href= updateUrl) Update
+            li(class="nav-item mr-3")
+              a(class="nav-link active" href= deleteUrl) Delete Account
+            li(class="nav-item mr-3")
+              a(class="nav-link active" href="/logout") Log Out
+  main 
+    div(class="container-fluid")
+      h1(class="mt-3") Welcome #{result.name.toUpperCase()} 
+      h2(class='mt-5 text-center') Disposal History
+      if items  
+        - let length = 1
+        - let deleteItem = '/item/delete'
+          table(class="table table-bordered mt-4")
+            thead
+              tr(class="bg bg-success text-white text-center")
+                th(scope='col') S/N
+                th(scope='col') DISPOSAL DATE
+                th(scope='col') STATUS
+                th(scope='col') #[p(class='fa fa-edit') Edit]
+                th(scope='col') #[p(class='fa fa-trash') Delete]
+              
+            each item in items
+              tbody
+                tr(class="text-center")
+                  td(scope="row") #{length++}
+                  td #{item.name}
+                  td(class="text-warning") #{item.status}
+                  td #[a(href="#" class="fa fa-edit edit")]
+                  td #[a(href= deleteItem class="fa fa-trash trash")]
+            else
+              p You have no active item
+    div(class='container text-center pt-5')
+      form(method='POST' action='')
+        label(for='item name' class='label') Disposal Date
+          input(type='text' placeholder='Date: ex. 21/12/2019' name='name' class='form-control mt-3')
+          input(type='hidden' name='user' value=result._id)
+          button(type='submit' name='submit' class='btn btn-success mt-3') Dispose
+
+      
+  
+
+  script(src="/javascripts/jquery.min.js")
+  script(src="/bootstrap/dist/js/bootstrap.min.js")
+
+     
+    
+    

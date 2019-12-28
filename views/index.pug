@@ -1,0 +1,62 @@
+include includes/header.pug
+
+block content 
+  nav(role="navigation" class="navbar navbar-expand-lg")
+    div(class="container")
+      a(class='navbar-brand' , href='/') ekoWaste
+      button(button type="button" class="navbar-toggler collapsed custom-toggler" data-toggle="collapse" data-target="#menu"
+        arials-control="menu" aria-expanded="false" aria-label="Toggle navigation")
+        span(class="navbar-toggler-icon")
+      div(class="navbar-collapse collapse" id="menu")
+       ul(class="navbar-nav ml-auto")
+          li(class="nav-item mr-3")
+            a(class="nav-link active" href="") Home
+          li(class="nav-item mr-3")
+            a(class="nav-link active" href="") About
+          li(class="nav-item mr-3")
+            a(class="nav-link active" href="/staff") Staff
+          li(class="nav-item mr-3")
+            a(class="nav-link active" href="/login") Log In
+  main(class="image")
+    div(class="main-content")
+      h1(class="header") Welcome to ekoWaste!!
+      p(class="info pt-2 text-center") Thinking of solutions on disposing your dirt in real time on request? 
+      a(class="btn btn-success button" , href="/signup") Sign Up
+  div(class="container mt-5 text-center")
+    div(class="row")
+      div(class="col-md-4")
+        h3 Our Services
+        p We are a brand that is uniquely in the business of satisfying our clients by carefully disposing our clients waste right on time
+      div(class="col-md-4")
+        h3 Our Partners
+        p We partner with Lagos State Ministry of Environment to deliver optimum services to our user, as we might all know, the world is heading to the direction of reusable waste. 
+      div(class="col-md-4")
+        h3 Who we are
+        p We are an online waste management agency, in this sense, our clients just need to have an account with us, right from thir mobile devices, all they need doing is push a point and our service men would be right there to pick up their waste.
+  div(class='container-fluid bg bg-success mt-4')
+   div(class="row")
+      div(class="col-md-3 col-6 mt-4")
+        a(class='nav-link' href='/') About
+        a(class='nav-link' href='/') Services
+        a(class='nav-link' href='/') Packages
+        a(class='nav-link' href='/') Terms
+      div(class="col-md-3 col-6 mt-4")
+        a(class='nav-link' href='/') Terms
+        a(class='nav-link' href='/') Privacy
+        a(class='nav-link' href='/') Contact Us
+        a(class='nav-link' href='/') Clients
+      div(class="col-md-3 col-6 mt-4")
+        a(class='nav-link' href='/') About
+        a(class='nav-link' href='/') Services
+        a(class='nav-link' href='/') Packages
+        a(class='nav-link' href='/') Terms
+      div(class="col-md-3 col-6 mt-4")
+        a(class='nav-link' href='/') About
+        a(class='nav-link' href='/') Services
+        a(class='nav-link' href='/') Packages
+        a(class='nav-link' href='/') Terms
+
+
+  script(src="/load.js")
+  script(src="/javascripts/jquery.min.js")
+  script(src="/bootstrap/dist/js/bootstrap.min.js")

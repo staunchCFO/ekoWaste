@@ -1,0 +1,33 @@
+extends layout 
+block content 
+  main 
+    div(class='container mt-5')
+      h1(class='text-center form-title')= title  
+      div(id="root") 
+      div(class='row') 
+        div(class='col-md-3') 
+        div(class='col-md-6')
+          form(action='' , method='POST' class='signup-form') 
+            if regError 
+            p(class='registration-error')  #{regError}
+            input(type='text' , 
+              | class='form-control' , name='name' id='name' placeholder="name" required) 
+            p(class='name-feedback')
+            input(type='text' ,
+              | class='form-control' , name='email' id='email' placeholder="email" required) 
+            span(class='email-feedback')
+            input(type='password' ,  class='form-control mt-4' , 
+              | name='password' id='password' placeholder="password" required)
+            span(class='password-feedback')
+            input(type='text' ,  class='form-control mt-4' , 
+              | name='address' id='password' placeholder="address" required)
+            span(class='password-feedback')
+            input(type='text' ,  class='form-control mt-4' , 
+              | name='phone' id='password' placeholder="Phone" required)
+            span(class='phone-feedback')
+            div(class="text-center")
+              input(type='submit'  , class='click mt-5 btn btn-success' , name='submit' id='submit' value='Sign up') 
+        div(class='col-md-3') 
+
+
+  script(src='/javascripts/signup.js')
